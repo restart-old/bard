@@ -14,14 +14,18 @@ import (
 type Bard struct {
 	energy    int
 	maxEnergy int
-	p         *player.Player
+	*player.Player
+
+	effectCooldown time.Time
 
 	tickers []*tickerFunc.Ticker
 }
 
+func (b *Bard) EffectCoolDown() bool              { return b.effectCooldown.After(time.Now()) }
+func (b *Bard) SetEffectCoolDown(d time.Duration) { b.effectCooldown = time.Now().Add(d) }
+
 func (b *Bard) energyTicker() *tickerFunc.Ticker {
 	return tickerFunc.NewTicker(1*time.Second, func() {
-		b.p.Message("test")
 		if b.maxEnergy > b.energy {
 			b.energy++
 		}
@@ -30,8 +34,9 @@ func (b *Bard) energyTicker() *tickerFunc.Ticker {
 
 func (*Bard) New(p *player.Player) class.Class {
 	bard := &Bard{
+		energy:    10000,
 		maxEnergy: 120,
-		p:         p,
+		Player:    p,
 	}
 	bard.tickers = append(bard.tickers, bard.energyTicker())
 	return bard
@@ -39,10 +44,10 @@ func (*Bard) New(p *player.Player) class.Class {
 
 func (*Bard) Armour() class.Armour {
 	return class.Armour{
-		armour.TierGold,
-		armour.TierGold,
-		armour.TierGold,
-		armour.TierGold,
+		Helmet:     armour.TierGold,
+		Chestplate: armour.TierGold,
+		Leggings:   armour.TierGold,
+		Boots:      armour.TierGold,
 	}
 }
 

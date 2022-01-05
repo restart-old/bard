@@ -35,6 +35,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/OneOfOne/xxhash v1.2.2 h1:KMrpdQIwFcEqXDklaen+P1axHaj9BSKzvpUUfnHldSE=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
+github.com/RestartFU/dfutil v0.0.0-20220105022157-440627b90d40 h1:q1b5CdVg8pMzreGPT39KflKShlZ3J9tqZ3nli+DKuXk=
+github.com/RestartFU/dfutil v0.0.0-20220105022157-440627b90d40/go.mod h1:mm6vqQUyPALgi/zjv7TQi9tbIP4tyzhwP8sjDFJ13tU=
 github.com/RestartFU/tickerFunc v0.0.0-20220104233957-220c316b7c4a h1:bsK+ptu2rKABCNonR4tcxhKV2DnU3g1sEiVOgNFUJ9c=
 github.com/RestartFU/tickerFunc v0.0.0-20220104233957-220c316b7c4a/go.mod h1:b21zje1uCXMaumUYUaqBk5H3bW31z/IzTCk6SkdQN9w=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
@@ -50,8 +52,9 @@ github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGX
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/df-HCF/class v0.0.0-20220105011522-678b63f7c131 h1:W5l7gI1VuhDd0UgnQbhw5kBz1zDcBar/7c2TTCPc8Bo=
-github.com/df-HCF/class v0.0.0-20220105011522-678b63f7c131/go.mod h1:RgEBqNk7WQGD7JKcHq+I0TOxeAPhW4PdE33MZnk5RYg=
+github.com/df-HCF/class v0.0.0-20220105024904-d1f5497eba15 h1:fJFSjUMeeYOc9VhSC946c5EOFrMCATzU8HyzKZtt+RU=
+github.com/df-HCF/class v0.0.0-20220105024904-d1f5497eba15/go.mod h1:RgEBqNk7WQGD7JKcHq+I0TOxeAPhW4PdE33MZnk5RYg=
+github.com/df-mc/dragonfly v0.4.3-0.20211228034935-5c6150017867/go.mod h1:saPioTIQPe/rDjVCbwkPie95qBuFilmreqZJM3HylOo=
 github.com/df-mc/dragonfly v0.5.2-0.20220104181347-f1af9d172848 h1:FaGn++uMWY2uyi8Am9pmhOgx1vYIEpxQBpQbq84nlQ8=
 github.com/df-mc/dragonfly v0.5.2-0.20220104181347-f1af9d172848/go.mod h1:n/ZtuBD7m9RilP4alZ3B8T93ZWnGF7ZEpTJ4zbyePZw=
 github.com/df-mc/goleveldb v1.1.9 h1:ihdosZyy5jkQKrxucTQmN90jq/2lUwQnJZjIYIC/9YU=
@@ -152,6 +155,7 @@ github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/sandertv/go-raknet v1.10.2 h1:aVwwSOhZQND6fo6aBJbJ4TSWIpfJWoxZMY//StAk7h4=
 github.com/sandertv/go-raknet v1.10.2/go.mod h1:s1lD7LTts74R9csTeI4WlGcp6PmXAGX+DeJlQF3KMlg=
+github.com/sandertv/gophertunnel v1.17.1/go.mod h1:cu9ZDQVTXY1RJO/te3syrPvCeCAzKt9eB4jkSzXljTw=
 github.com/sandertv/gophertunnel v1.18.1 h1:JHULaRk83QRY9/H8wmngU7HLGIaGse2cMaYpZl4xWfM=
 github.com/sandertv/gophertunnel v1.18.1/go.mod h1:cu9ZDQVTXY1RJO/te3syrPvCeCAzKt9eB4jkSzXljTw=
 github.com/sirupsen/logrus v1.8.1 h1:dJKuHgqk1NNQlqoA6BTlM1Wf9DOH3NBjQyu0h9+AZZE=
