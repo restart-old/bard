@@ -37,6 +37,8 @@ github.com/OneOfOne/xxhash v1.2.2 h1:KMrpdQIwFcEqXDklaen+P1axHaj9BSKzvpUUfnHldSE
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
 github.com/RestartFU/dfutil v0.0.0-20220105022157-440627b90d40 h1:q1b5CdVg8pMzreGPT39KflKShlZ3J9tqZ3nli+DKuXk=
 github.com/RestartFU/dfutil v0.0.0-20220105022157-440627b90d40/go.mod h1:mm6vqQUyPALgi/zjv7TQi9tbIP4tyzhwP8sjDFJ13tU=
+github.com/RestartFU/dfutil v0.0.0-20220106023000-f635418c000d h1:e5didLkamvht2WWzbMfg05YT9AWggAd6PEDtKKB/Gs8=
+github.com/RestartFU/dfutil v0.0.0-20220106023000-f635418c000d/go.mod h1:RsP6iucpenQJuUsBCmB+Cj7y+j8wxfbSuOU6Vt3nD4Y=
 github.com/RestartFU/tickerFunc v0.0.0-20220104233957-220c316b7c4a h1:bsK+ptu2rKABCNonR4tcxhKV2DnU3g1sEiVOgNFUJ9c=
 github.com/RestartFU/tickerFunc v0.0.0-20220104233957-220c316b7c4a/go.mod h1:b21zje1uCXMaumUYUaqBk5H3bW31z/IzTCk6SkdQN9w=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=

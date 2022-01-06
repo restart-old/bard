@@ -14,11 +14,21 @@ import (
 type Bard struct {
 	energy    int
 	maxEnergy int
+	radius    float64
 	*player.Player
 
-	effectCooldown time.Time
+	effectCooldown   time.Time
+	coolDownDuration time.Duration
 
 	tickers []*tickerFunc.Ticker
+}
+
+func New(radius float64, maxEnergy int, coolDownDuration time.Duration) *Bard {
+	return &Bard{
+		maxEnergy:        maxEnergy,
+		radius:           radius,
+		coolDownDuration: coolDownDuration,
+	}
 }
 
 func (b *Bard) EffectCoolDown() bool              { return b.effectCooldown.After(time.Now()) }
@@ -32,11 +42,12 @@ func (b *Bard) energyTicker() *tickerFunc.Ticker {
 	})
 }
 
-func (*Bard) New(p *player.Player) class.Class {
+func (b *Bard) New(p *player.Player) class.Class {
 	bard := &Bard{
-		energy:    10000,
-		maxEnergy: 120,
-		Player:    p,
+		coolDownDuration: b.coolDownDuration,
+		radius:           b.radius,
+		maxEnergy:        b.maxEnergy,
+		Player:           p,
 	}
 	bard.tickers = append(bard.tickers, bard.energyTicker())
 	return bard
@@ -52,7 +63,7 @@ func (*Bard) Armour() class.Armour {
 }
 
 func (b *Bard) Handler(p *player.Player) player.Handler {
-	return &handler{bard: b}
+	return &playerHandler{bard: b}
 }
 
 func (b *Bard) Tickers(p *player.Player) []*tickerFunc.Ticker {

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"time"
+
 	"github.com/df-HCF/bard"
 	"github.com/df-HCF/class"
 	"github.com/df-mc/dragonfly/server"
@@ -13,7 +15,7 @@ func main() {
 	c.Players.SaveData = false
 	s := server.New(&c, nil)
 	s.Start()
-	class.Register(&bard.Bard{})
+	class.Register(bard.New(35, 120, 10*time.Second))
 	bard.RegisterItem(bard.UseSugar{})
 	bard.RegisterItem(bard.UseIronIngot{})
 	bard.RegisterItem(bard.UseBlazePowder{})

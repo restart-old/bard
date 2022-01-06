@@ -3,7 +3,7 @@ module github.com/df-HCF/bard
 go 1.17
 
 require (
-	github.com/RestartFU/dfutil v0.0.0-20220105022157-440627b90d40
+	github.com/RestartFU/dfutil v0.0.0-20220106023000-f635418c000d
 	github.com/RestartFU/tickerFunc v0.0.0-20220104233957-220c316b7c4a
 	github.com/df-HCF/class v0.0.0-20220105024904-d1f5497eba15
 	github.com/df-mc/dragonfly v0.5.2-0.20220104181347-f1af9d172848
