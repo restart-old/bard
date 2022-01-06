@@ -1,6 +1,7 @@
 package bard
 
 import (
+	"sync"
 	"time"
 
 	"github.com/RestartFU/tickerFunc"
@@ -16,7 +17,8 @@ type Bard struct {
 	maxEnergy int
 	radius    float64
 	*player.Player
-
+	h                Handler
+	hMu              sync.RWMutex
 	effectCooldown   time.Time
 	coolDownDuration time.Duration
 
@@ -28,7 +30,22 @@ func New(radius float64, maxEnergy int, coolDownDuration time.Duration) *Bard {
 		maxEnergy:        maxEnergy,
 		radius:           radius,
 		coolDownDuration: coolDownDuration,
+		h:                NopHandler{},
 	}
+}
+
+func (b *Bard) Handle(h Handler) {
+	if h != nil {
+		b.hMu.Lock()
+		defer b.hMu.Unlock()
+		b.h = h
+	}
+}
+
+func (b *Bard) handler() Handler {
+	b.hMu.RLock()
+	defer b.hMu.RUnlock()
+	return b.h
 }
 
 func (b *Bard) EffectCoolDown() bool              { return b.effectCooldown.After(time.Now()) }

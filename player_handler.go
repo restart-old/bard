@@ -34,13 +34,21 @@ func (h *playerHandler) HandleItemUse(ctx *event.Context) {
 		bard.SetEffectCoolDown(bard.coolDownDuration)
 		bard.energy -= i.Energy()
 
-		for _, p := range dfutil.PlayersInRadius(bard.Player, bard.radius) {
-			// Add the effect
-			if e, ok := bard.Effect(i.Effect().Type()); ok {
-				dfutil.NewEffectNoLoss(i.Effect(), e).Add(p)
-				return
+		ctx := event.C()
+
+		pls := dfutil.PlayersInRadius(bard.Player, bard.radius)
+		players := &pls
+
+		bard.handler().HandleBardEffectUse(ctx, i, players)
+		ctx.Continue(func() {
+			for _, p := range *players {
+				// Add the effect
+				if e, ok := bard.Effect(i.Effect().Type()); ok {
+					dfutil.NewEffectNoLoss(i.Effect(), e).Add(p)
+					return
+				}
+				p.AddEffect(i.Effect())
 			}
-			p.AddEffect(i.Effect())
-		}
+		})
 	}
 }
